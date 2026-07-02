@@ -19,9 +19,9 @@ COPY --chmod=755 docker/nexus-webapp/install_python.sh /tmp/install_python.sh
 
 # Install python
 RUN /tmp/install_python.sh
-RUN ln -s /opt/python/3.9.7/bin/python3.9  /opt/python/3.9.7/bin/python
+RUN ln -s /opt/python/3.11.9/bin/python3.11  /opt/python/3.11.9/bin/python
 
-ENV PATH="/opt/python/3.9.7/bin:$PATH"
+ENV PATH="/opt/python/3.11.9/bin:$PATH"
 
 # Python & Poetry env vars
 ENV PYTHONUNBUFFERED=1 \
@@ -93,10 +93,10 @@ ENV  \
     NEXUS_SRC=/tmp/incubator-sdap-nexus \
     \
 #    PROJ_LIB=/opt/conda/lib/python3.8/site-packages/pyproj/data	\
-    PATH="$POETRY_HOME/bin:$VENV_PATH/bin:/opt/python/3.9.7/bin:$PATH" \
-    SPARK_HOME=/incubator-sdap-nexus/.venv/lib/python3.9/site-packages/pyspark \
-    PYSPARK_DRIVER_PYTHON=/incubator-sdap-nexus/.venv/bin/python3.9 \
-    PYSPARK_PYTHON=/incubator-sdap-nexus/.venv/bin/python3.9 \
+    PATH="$POETRY_HOME/bin:$VENV_PATH/bin:/opt/python/3.11.9/bin:$PATH" \
+    SPARK_HOME=/incubator-sdap-nexus/.venv/lib/python3.11/site-packages/pyspark \
+    PYSPARK_DRIVER_PYTHON=/incubator-sdap-nexus/.venv/bin/python3.11 \
+    PYSPARK_PYTHON=/incubator-sdap-nexus/.venv/bin/python3.11 \
     LD_LIBRARY_PATH=/usr/lib \
     REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 

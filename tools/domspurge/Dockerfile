@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM python:3.8.13
+FROM python:3.11-slim
 
 COPY tools/domspurge/purge.py /domspurge/purge.py
 COPY tools/domspurge/requirements.txt /domspurge/requirements.txt

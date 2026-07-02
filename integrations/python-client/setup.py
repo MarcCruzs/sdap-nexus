@@ -43,6 +43,6 @@ setup(
         'Development Status :: 1 - Pre-Alpha',
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.11',
     ]
 )
